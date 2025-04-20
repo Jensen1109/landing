@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+body{
+    background-color: #f6fbff;
+    color:#1a1a1a;
+}
+.logo img{
+    max-width: 35px;
+    min-width: 35px;
+    
+} 
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #f6fbff;
+}
+.logo{
+    font-weight: bold;
+    color: #333;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+nav a{
+    text-decoration: none;
+    color: #666;
+    font-size: 15px;
+}
+nav .signup{
+    background-color: #3ba9ff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 10%;
+    min-height: calc(100vh - 80px);
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.texto{
+    max-width: 500px;
+}
+.texto h1{
+    font-size: 36px;
+    color: #2d2d2d;
+    margin-bottom: 20px;
+}
+.texto p{
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 30px;
+}
+.boton{
+    text-decoration: none;
+    background-color: #3ba9ff;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.imgen img{
+    width: 400px;
+    border-radius: 20px;
+}
