@@ -8,27 +8,37 @@ body{
     background-color: #f6fbff;
     color:#1a1a1a;
 }
-.logo img{
-    max-width: 35px;
-    min-width: 35px;
-    
-} 
+
 header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
     padding: 20px 10%;
     background-color: #f6fbff;
+    overflow: hidden;
+    position: relative;
 }
 .logo{
     font-weight: bold;
     color: #333;
+    display: inline-block;
+    vertical-align: middle;
+}
+.logo img{
+    max-width: 35px;
+    min-height: 35px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+nav{
+    display:inline-block;
+    vertical-align: middle;
+    float:right;
 }
 nav ul{
     list-style: none;
-    display: flex;
-    gap: 25px;
-    align-items: center;
+}
+nav ul li{
+    display: inline-block;
+    margin-left: 25px;
 }
 nav a{
     text-decoration: none;
@@ -42,20 +52,20 @@ nav .signup{
     border-radius: 8px;
 }
 main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     padding: 60px 10%;
     min-height: calc(100vh - 80px);
 }
 .content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
+    display: inline-block;
+    text-align: left;
+    max-width: 1200px;
 }
 .texto{
-    max-width: 500px;
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    margin-right: 5%;
 }
 .texto h1{
     font-size: 36px;
@@ -75,7 +85,14 @@ main{
     border-radius: 8px;
     font-weight: bold;
 }
+.imgen{
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+}
 .imgen img{
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     border-radius: 20px;
 }
