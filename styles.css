@@ -12,6 +12,7 @@ body {
     color: #1a1a1a; /* Color de texto oscuro */
 }
 
+<<<<<<< HEAD
 /* Estilos para la imagen del logo */
 .logo img {
     max-width: 35px; /* Ancho máximo fijo para logo */
@@ -35,6 +36,38 @@ header {
     display: inline-block; /* Mostrar como bloque en línea para alineación horizontal */
     vertical-align: middle; /* Alinea verticalmente a medio en línea */
     line-height: 35px; /* Altura de línea igual a la altura del logo para alinear texto */
+=======
+header{
+    width: 100%;
+    padding: 20px 10%;
+    background-color: #f6fbff;
+    overflow: hidden;
+    position: relative;
+}
+.logo{
+    font-weight: bold;
+    color: #333;
+    display: inline-block;
+    vertical-align: middle;
+}
+.logo img{
+    max-width: 35px;
+    min-height: 35px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+nav{
+    display:inline-block;
+    vertical-align: middle;
+    float:right;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-left: 25px;
+>>>>>>> 095869ddd044c4ef66bb5051b21786714e16386e
 }
 
 /* Estilos para la navegación */
@@ -48,6 +81,7 @@ nav ul {
     list-style: none; /* Elimina puntos predeterminados de lista */
     margin-left: 30px; /* Margen a la izquierda para separar la lista del logo */
 }
+<<<<<<< HEAD
 
 /* Estilos para los elementos de lista del menú */
 nav ul li {
@@ -70,6 +104,23 @@ nav .signup {
     padding: 8px 16px; /* Relleno vertical y horizontal */
     border-radius: 8px; /* Bordes redondeados */
     font-weight: bold; /* Texto en negrita */
+=======
+main{
+    text-align: center;
+    padding: 60px 10%;
+    min-height: calc(100vh - 80px);
+}
+.content{
+    display: inline-block;
+    text-align: left;
+    max-width: 1200px;
+}
+.texto{
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    margin-right: 5%;
+>>>>>>> 095869ddd044c4ef66bb5051b21786714e16386e
 }
 
 /* Estilos para el main */
@@ -208,3 +259,17 @@ main {
         padding: 6px 12px; /* Botón más pequeño */
     }
 }
+<<<<<<< HEAD
+=======
+.imgen{
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+}
+.imgen img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+}
+>>>>>>> 095869ddd044c4ef66bb5051b21786714e16386e
