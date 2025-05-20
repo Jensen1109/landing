@@ -1,81 +1,210 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+/* Reset básico para eliminar márgenes y rellenos predeterminados, y establecer box-sizing */
+* {
+    margin: 0; /* Elimina margen predeterminado para todos los elementos */
+    padding: 0; /* Elimina relleno predeterminado para todos los elementos */
+    box-sizing: border-box; /* Incluye borde y padding dentro del ancho y alto total */
+    font-family: 'Segoe UI', sans-serif; /* Establece la fuente base para todo el documento */
 }
-body{
-    background-color: #f6fbff;
-    color:#1a1a1a;
+
+/* Estilos para el cuerpo de la página */
+body {
+    background-color: #f6fbff; /* Color de fondo azul muy claro */
+    color: #1a1a1a; /* Color de texto oscuro */
 }
-.logo img{
-    max-width: 35px;
-    min-width: 35px;
-    
-} 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background-color: #f6fbff;
+
+/* Estilos para la imagen del logo */
+.logo img {
+    max-width: 35px; /* Ancho máximo fijo para logo */
+    min-width: 35px; /* Ancho mínimo fijo para logo */
+    vertical-align: middle; /* Alinea verticalmente en medio para elementos inline-block */
 }
-.logo{
-    font-weight: bold;
-    color: #333;
+
+/* Estilos para la cabecera */
+header {
+    background-color: #f6fbff; /* Color de fondo para encabezado */
+    padding: 20px 10%; /* Espaciado vertical 20px y horizontal 10% */
+    /* Usamos texto centrado, ya que no usamos flex o grid */
+    text-align: center; /* Centra texto */
+    position: relative; /* Posicionamiento relativo para posibles ajustes futuros */
 }
-nav ul{
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    align-items: center;
+
+/* Estilos para el contenedor del logo */
+.logo {
+    font-weight: bold; /* Texto en negrita */
+    color: #333; /* Color gris oscuro para texto */
+    display: inline-block; /* Mostrar como bloque en línea para alineación horizontal */
+    vertical-align: middle; /* Alinea verticalmente a medio en línea */
+    line-height: 35px; /* Altura de línea igual a la altura del logo para alinear texto */
 }
-nav a{
-    text-decoration: none;
-    color: #666;
-    font-size: 15px;
+
+/* Estilos para la navegación */
+nav {
+    display: inline-block; /* Mostrar como bloque en línea para que esté al lado del logo */
+    vertical-align: middle; /* Alinea en medio verticalmente */
 }
-nav .signup{
-    background-color: #3ba9ff;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 8px;
+
+/* Estilos para la lista de navegación */
+nav ul {
+    list-style: none; /* Elimina puntos predeterminados de lista */
+    margin-left: 30px; /* Margen a la izquierda para separar la lista del logo */
 }
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 10%;
-    min-height: calc(100vh - 80px);
+
+/* Estilos para los elementos de lista del menú */
+nav ul li {
+    display: inline-block; /* Muestra los elementos de lista en línea horizontal */
+    margin-left: 25px; /* Espacio izquierdo entre elementos */
+    vertical-align: middle; /* Alinea verticalmente en medio */
 }
-.content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
+
+/* Estilos para los enlaces de navegación */
+nav a {
+    text-decoration: none; /* Elimina subrayado */
+    color: #666; /* Color gris medio para enlaces */
+    font-size: 15px; /* Tamaño de fuente */
 }
-.texto{
-    max-width: 500px;
+
+/* Estilos para el botón signup */
+nav .signup {
+    background-color: #3ba9ff; /* Color azul brillante */
+    color: white; /* Texto blanco */
+    padding: 8px 16px; /* Relleno vertical y horizontal */
+    border-radius: 8px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
 }
-.texto h1{
-    font-size: 36px;
-    color: #2d2d2d;
-    margin-bottom: 20px;
+
+/* Estilos para el main */
+main {
+    padding: 60px 10%; /* Relleno arriba y abajo 60px y horizontal 10% */
+    min-height: calc(100vh - 80px); /* Altura mínima para llenar la pantalla menos altura header */
+    text-align: center; /* Centra el texto inicialmente */
 }
-.texto p{
-    font-size: 16px;
-    color: #777;
-    margin-bottom: 30px;
+
+/* Contenedor para contenido principal con dos columnas */
+.content {
+    max-width: 1000px; /* Ancho máximo para contenido */
+    margin: 0 auto; /* Centra horizontalmente */
+    font-size: 0; /* Elimina espacio blanco entre inline-block hijos */
 }
-.boton{
-    text-decoration: none;
-    background-color: #3ba9ff;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: bold;
+
+/* Estilo general para texto y contenedor de imagen */
+.texto,
+.imgen {
+    display: inline-block; /* Permite que estén lado a lado */
+    vertical-align: top; /* Alínea al top para que queden alineados arriba */
+    font-size: 16px; /* Restaura tamaño de fuente para hijos */
+    width: 48%; /* Ancho para que los dos sumen menos del 100% y haya espacio */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho */
 }
-.imgen img{
-    width: 400px;
-    border-radius: 20px;
+
+/* Estilos específicos para el texto */
+.texto {
+    text-align: left; /* Alinea texto a la izquierda */
+}
+
+/* Estilos para encabezado dentro de texto */
+.texto h1 {
+    font-size: 36px; /* Tamaño grande de fuente */
+    color: #2d2d2d; /* Color gris oscuro */
+    margin-bottom: 20px; /* Margen debajo */
+}
+
+/* Estilos para párrafo dentro de texto */
+.texto p {
+    font-size: 16px; /* Tamaño estándar de fuente */
+    color: #777; /* Gris medio */
+    margin-bottom: 30px; /* Margen debajo */
+}
+
+/* Estilos para el botón */
+.boton {
+    text-decoration: none; /* Sin subrayado */
+    background-color: #3ba9ff; /* Fondo azul */
+    color: white; /* Texto blanco */
+    padding: 12px 24px; /* Espaciado interior */
+    border-radius: 8px; /* Bordes redondeados */
+    font-weight: bold; /* Negrita */
+}
+
+/* Estilos para la imagen */
+.imgen img {
+    width: 100%; /* Ancho completo de su contenedor */
+    border-radius: 20px; /* Bordes redondeados */
+    max-width: 400px; /* Máximo ancho fijo */
+}
+
+/* Media queries para hacer la página responsive sin flex o grid */
+@media (max-width: 768px) {
+    /* Cabecera en modo vertical para móviles */
+    header {
+        text-align: center; /* Texto centrado */
+        padding: 20px 5%; /* Reduce padding horizontal */
+    }
+
+    /* Logo y navegación en bloque */
+    .logo,
+    nav {
+        display: block; /* Elementos bloque apilados */
+        margin: 0 auto; /* Centrado horizontal */
+    }
+
+    /* Lista de navegación sin margen izquierda */
+    nav ul {
+        margin-left: 0;
+        padding: 0;
+    }
+
+    /* Elementos del menú en bloque vertical */
+    nav ul li {
+        display: block;
+        margin: 10px 0; /* Espacio arriba y abajo */
+    }
+
+    /* Contenido principal apilado verticalmente */
+    .content {
+        font-size: 16px; /* Restaura tamaño normal */
+    }
+
+    /* Texto e imagen a full ancho uno encima del otro */
+    .texto,
+    .imgen {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* Margen inferior entre texto e imagen */
+    .texto {
+        margin-bottom: 30px;
+    }
+
+    /* Ajustes para tamaños en texto */
+    .texto h1 {
+        font-size: 28px; /* Fuente más pequeña */
+    }
+
+    .texto p {
+        font-size: 14px; /* Fuente más pequeña para párrafo */
+    }
+
+    /* Imagen ocupa el 90% del ancho máximo en móvil */
+    .imgen img {
+        max-width: 90%;
+        height: auto; /* Mantiene proporción */
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .logo img {
+        max-width: 30px; /* Logo más pequeño */
+    }
+
+    nav a {
+        font-size: 14px; /* Texto del menú más pequeño */
+    }
+
+    nav .signup {
+        padding: 6px 12px; /* Botón más pequeño */
+    }
 }
